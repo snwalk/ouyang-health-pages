@@ -3,101 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>眩晕的相关知识</title>
+  <title>认知功能自查问卷 | 记忆门诊</title>
   <style>
-    /* 页面整体样式 */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f7f6;
+      font-family: "Segoe UI", "Microsoft Yahei", sans-serif;
+      background-color: #f7f9fa;
       color: #333;
-      line-height: 1.6;
       padding: 2rem;
-      max-width: 900px;
-      margin: 0 auto;
-      background: linear-gradient(to top, #ffffff, #f4f7f6);
-      text-align: center;
-    }
-
-    /* 按钮样式 */
-    .btn {
-      padding: 12px 24px;
-      background-color: #4CAF50;
-      color: white;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin: 10px;
-      transition: background-color 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #45a049;
-    }
-
-    /* 内容框样式 */
-    .content {
-      display: none;
-      background-color: #eafaf1;
-      padding: 1.5rem;
-      margin-top: 20px;
-      border-left: 8px solid #4CAF50;
-      font-size: 1.2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.8;
     }
 
     h1 {
-      color: #2c3e50;
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
+      font-size: 2rem;
       text-align: center;
-      border-bottom: 4px solid #4CAF50;
-      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      color: #2c3e50;
+    }
+
+    .section {
+      margin-bottom: 1rem;
+    }
+
+    .toggle-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: background-color 0.3s;
+    }
+
+    .toggle-button:hover {
+      background-color: #45a049;
+    }
+
+    .content {
+      display: none;
+      background-color: #e8f5e9;
+      padding: 1rem;
+      border-left: 6px solid #4CAF50;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .tip {
+      background-color: #fff3cd;
+      border-left: 6px solid #ffc107;
+      padding: 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
     }
   </style>
 </head>
 <body>
-  <h1>眩晕的相关知识</h1>
-  
-  <button class="btn" onclick="showContent('concept')">眩晕的概念</button>
-  <button class="btn" onclick="showContent('diagnosis')">眩晕的诊断</button>
-  <button class="btn" onclick="showContent('treatment')">眩晕的治疗</button>
-  <button class="btn" onclick="showContent('prevention')">眩晕的预防</button>
 
-  <div id="concept" class="content">
-    <h2>什么是眩晕？</h2>
-    <p>眩晕（Vertigo）是一种令人不安的旋转或运动的感觉，通常会让患者产生自己或周围物体在转动的错觉。它通常是由于前庭系统的异常所引起的，前庭系统位于耳内，负责调节身体的平衡感。眩晕不是一种疾病，而是许多不同疾病的一个症状，它可能由内耳疾病、前庭神经炎、梅尼埃病、脑血管疾病等多种原因引起。</p>
+  <h1>认知功能自查问卷</h1>
+  <p style="text-align:center;">点击下方每个项目，看看你是否有早期认知功能变化的迹象。</p>
+
+  <div class="section">
+    <button class="toggle-button" onclick="toggle('memory')">📘 记忆力是否变差？</button>
+    <div class="content" id="memory">
+      <ul>
+        <li>最近常常忘记熟人名字、重要日期或事情？</li>
+        <li>重复问相同的问题而自己没有印象？</li>
+        <li>物品放错地方，比如钥匙、钱包总是找不到？</li>
+      </ul>
+    </div>
   </div>
 
-  <div id="diagnosis" class="content">
-    <h2>眩晕的诊断</h2>
-    <p>诊断眩晕需要进行详细的病史询问和体格检查。医生会了解患者眩晕发作的时间、持续时间、频率和伴随症状。常见的诊断方法包括前庭功能测试、听力检查、MRI、CT扫描等检查手段，以帮助确定眩晕的具体原因。为了更准确地评估眩晕，可能需要进行诸如视听反射、前庭诱发肌电图（VEMP）等特殊检查。</p>
+  <div class="section">
+    <button class="toggle-button" onclick="toggle('direction')">🧭 定向感是否变差？</button>
+    <div class="content" id="direction">
+      <ul>
+        <li>走熟悉的路也容易迷路？</li>
+        <li>分不清日期、季节或时间段？</li>
+        <li>常常搞混家里房间或周围环境？</li>
+      </ul>
+    </div>
   </div>
 
-  <div id="treatment" class="content">
-    <h2>眩晕的治疗</h2>
-    <p>治疗眩晕的方法取决于其病因。如果眩晕由良性阵发性位置性眩晕（BPPV）引起，可以通过头部位置改变（如Epley操纵法）来治疗。梅尼埃病的治疗则包括药物治疗和低盐饮食。如果眩晕由前庭神经炎或其他神经系统疾病引起，医生可能会开具抗病毒药物、抗生素或激素治疗。对于持续性和严重的眩晕，可能还需要进行物理治疗或手术治疗。</p>
+  <div class="section">
+    <button class="toggle-button" onclick="toggle('execution')">📋 做事是否不如以前有条理？</button>
+    <div class="content" id="execution">
+      <ul>
+        <li>做饭、购物、记账等家务变得困难？</li>
+        <li>容易搞混流程或任务顺序？</li>
+        <li>计划事情后难以执行，容易拖延？</li>
+      </ul>
+    </div>
   </div>
 
-  <div id="prevention" class="content">
-    <h2>眩晕的预防</h2>
-    <p>防止眩晕的发生，首先需要注意生活方式的调整，避免过度劳累和精神压力，保持良好的睡眠质量，适当运动，增强体质。对已有前庭疾病的人群，遵循医生建议，定期检查，避免疾病复发。此外，控制慢性疾病，如高血压和糖尿病，也是减少眩晕发生的关键。</p>
+  <div class="section">
+    <button class="toggle-button" onclick="toggle('personality')">😠 性格脾气是否发生改变？</button>
+    <div class="content" id="personality">
+      <ul>
+        <li>变得急躁、易怒、小事就发火？</li>
+        <li>兴趣减少，对以前喜欢的事情没兴趣？</li>
+        <li>变得不愿意社交，情绪低落？</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tip">
+    📌 如果你在任意一项中有 <strong>2 条及以上</strong> 情况，建议到 <strong>长沙市中医医院神经内科或记忆门诊</strong> 评估认知功能。
   </div>
 
   <script>
-    function showContent(type) {
-      // 隐藏所有内容
-      var contents = document.querySelectorAll('.content');
-      contents.forEach(function(content) {
-        content.style.display = 'none';
-      });
-
-      // 显示选中的内容
-      var selectedContent = document.getElementById(type);
-      selectedContent.style.display = selectedContent.style.display === 'block' ? 'none' : 'block';
+    function toggle(id) {
+      var content = document.getElementById(id);
+      content.style.display = content.style.display === "block" ? "none" : "block";
     }
   </script>
+
 </body>
 </html>
+
